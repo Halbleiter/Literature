@@ -1,0 +1,3124 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Group Theory
+\end_layout
+
+\begin_layout Standard
+\align left
+Equations of motions or systems studied in QM are often invariant with respect
+ to certain groups of transformations.
+ Group theory, sort out consequences and simplifications which follow from
+ the symmetries captured by the group.
+ 
+\end_layout
+
+\begin_layout Section*
+Definitions
+\end_layout
+
+\begin_layout Standard
+A group is a set of elements 
+\begin_inset Formula $G=\{g_{i}\}$
+\end_inset
+
+ together with a map (group product) fulfilling
+\end_layout
+
+\begin_layout Itemize
+a group product of two elements remains in 
+\begin_inset Formula $G$
+\end_inset
+
+ (i.e.
+ the elements of 
+\begin_inset Formula $G$
+\end_inset
+
+ transform among each other)
+\begin_inset Formula 
+\[
+g_{1}g_{2}\in G\quad\forall\,g_{1},g_{2}\in G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+existence of the unit element 
+\begin_inset Formula $e\in G$
+\end_inset
+
+, with
+\begin_inset Formula 
+\[
+eg=ge=g\quad\forall\,g\in G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+each element 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ has a inverse 
+\begin_inset Formula $g^{-1}\in G$
+\end_inset
+
+ with
+\begin_inset Formula 
+\[
+gg^{-1}=g^{-1}g=e
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The group product is associative 
+\begin_inset Formula 
+\[
+g_{1}(g_{2}g_{3})=(g_{1}g_{2})g_{3}\quad\forall\,g_{i}\in G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In concrete groups the group product can e.g.
+ be realized by multiplication or addition of numbers or matrices
+\end_layout
+
+\begin_layout Itemize
+For discrete groups it makes sense to count the number 
+\begin_inset Formula $\bigl|G\bigr|=n$
+\end_inset
+
+ of its elements called order.
+ We distinguish between
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Finite group
+\series default
+s: Finite number of elements in 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Infinite group
+\series default
+s: Infinite number of elements in 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Continuous groups have a notion of distance, two group elements are arbitrarily
+ close
+\end_layout
+
+\begin_layout Itemize
+Elements can be parameterized by a set of real parameters 
+\begin_inset Formula $g(\alpha_{1},\,\ldots,\alpha_{k})$
+\end_inset
+
+ and 
+\begin_inset Formula $g(\alpha+\epsilon)$
+\end_inset
+
+ is very close to 
+\begin_inset Formula $g(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $g_{1}g_{2}=g_{2}g_{1}\quad\forall\,g_{1},g_{2}\in G$
+\end_inset
+
+, the group is called to be 
+\emph on
+Abelian
+\emph default
+ or commutative 
+\end_layout
+
+\begin_layout Itemize
+Dimension is the number of parameters necessary to define the group (i.e.
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ in the upper case)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e$
+\end_inset
+
+ and 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+ are unique 
+\end_layout
+
+\begin_layout Itemize
+rearrangement theorem
+\begin_inset Formula 
+\[
+gG=\{gg_{i}\}=G
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Multiplying from the left with 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+g^{-1}gG\in G
+\]
+
+\end_inset
+
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Examples
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Finite groups
+\end_layout
+
+\begin_layout Itemize
+the first 
+\begin_inset Formula $n$
+\end_inset
+
+-th roots of unity form an Abelian group of order 
+\begin_inset Formula $n$
+\end_inset
+
+ under multiplication.
+ Define 
+\begin_inset Formula $\theta=e^{2\pi i/n}$
+\end_inset
+
+ and 
+\begin_inset Formula $G=\{\theta^{p},\,p=1,\,\ldots,\,n\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Identity is 
+\begin_inset Formula $\theta^{n}=1$
+\end_inset
+
+, the inverse of 
+\begin_inset Formula $\theta^{p}=\theta^{-p}=\theta^{n-p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In such a group 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is called generating element
+\end_layout
+
+\begin_layout Itemize
+Any element 
+\begin_inset Formula $\theta^{p}$
+\end_inset
+
+, where 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ are relatively prime, is again a generating element 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Integers under addition modulo 
+\begin_inset Formula $n$
+\end_inset
+
+ form a group, which is isomorphic to the previous one.
+ Identical group structures can be realized in different ways.
+ A group which is generated by a single element 
+\begin_inset Formula $\theta$
+\end_inset
+
+ which satisfies 
+\begin_inset Formula $\theta^{n}=e$
+\end_inset
+
+ is called cyclic group of order 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In some sense most general finite group is the 
+\emph on
+symmetric 
+\emph default
+group 
+\begin_inset Formula $S_{n},$
+\end_inset
+
+consisting of the permutation of 
+\begin_inset Formula $n$
+\end_inset
+
+ things.
+ Cayley's theorem states that every finite group of order 
+\begin_inset Formula $N$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $S_{N}$
+\end_inset
+
+.
+ This group is not Abelian
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Infinite discrete groups
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(\mathbb{Z},+)$
+\end_inset
+
+: Integer numbers under addition
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Modular 
+\emph default
+group of 
+\begin_inset Formula $SL(2,\mathbb{Z})$
+\end_inset
+
+ of integer-values 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrices with unit determinant, under matrix multiplication.
+ Important in string theory
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Continuous compact groups
+\series default
+: 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+topology group which topology is compact.
+ A 
+\emph on
+topological
+\emph default
+ group is a group 
+\begin_inset Formula $G$
+\end_inset
+
+ together with a topology on 
+\begin_inset Formula $G$
+\end_inset
+
+ such that the group's binary operation (group product) and group's inverse
+ function are continuous functions with respect to the topology.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Orthogonal 
+\emph default
+group 
+\begin_inset Formula $O(n)$
+\end_inset
+
+, the group of real 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices 
+\begin_inset Formula $O$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $O^{T}O=I$
+\end_inset
+
+.
+ This corresponds to rotations and reflections in 
+\begin_inset Formula $n$
+\end_inset
+
+-dimensional Euclidean space 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ The topology of the group is the subspace of 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbb{R}^{n\times n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Unitary
+\emph default
+ group 
+\begin_inset Formula $U(m)$
+\end_inset
+
+, the group of complex 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices satisfying 
+\begin_inset Formula $U^{\dagger}U=I$
+\end_inset
+
+.
+ This corresponds to (holomorphic) rotations and reflections in 
+\begin_inset Formula $\mathbb{C}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Orthogonal matrices have determinant 
+\begin_inset Formula $\pm1$
+\end_inset
+
+, while unitary matrices have determinant 
+\begin_inset Formula $e^{i\varphi}$
+\end_inset
+
+, i.e.
+ modulus one.
+ In both cases, there is a 
+\emph on
+special 
+\emph default
+version of the groups, 
+\begin_inset Formula $SO(n)$
+\end_inset
+
+ and 
+\begin_inset Formula $SU(n)$
+\end_inset
+
+, respectively, with the extra distraction that the matrices must have determina
+nt one
+\end_layout
+
+\begin_layout Itemize
+Orthogonal groups are not connected: The determinant is a continuous function
+ of the group elements, and since it can only take values 
+\begin_inset Formula $\pm1$
+\end_inset
+
+, 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ must have (at least) two connected components, one of which is 
+\begin_inset Formula $SO(n)$
+\end_inset
+
+, while matrices with determinant 
+\begin_inset Formula $-1$
+\end_inset
+
+ do not form a group
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Unclear
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Continuous non compact groups
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+The real (rational, complex) numbers under addition.
+ If zero is excluded, they also form a group under multiplication 
+\end_layout
+
+\begin_layout Subsection*
+Subgroups 
+\end_layout
+
+\begin_layout Standard
+A subgroup of 
+\begin_inset Formula $H$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+ is a subset of elements which forms a group under the group product of
+ 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Every subgroup must contain the identity 
+\end_layout
+
+\begin_layout Itemize
+A subset 
+\begin_inset Formula $H\subset G$
+\end_inset
+
+ is a subgroup if and only if 
+\begin_inset Formula $\forall\,h_{1},h_{2}\in H,\,h_{1}h_{2}^{-1}\in H$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This has to be because a group must fulfill 
+\begin_inset Formula $h_{2}^{-1}\in H$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{i}h_{j}\in H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\{e\}$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+ itself are trivial subgroups
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $G$
+\end_inset
+
+ is Abelian, so is 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ The converse is not true
+\end_layout
+
+\begin_layout Itemize
+Every element 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ generates an Abelian subgroup 
+\begin_inset Formula $\{g\}$
+\end_inset
+
+.
+ For elements of finite order, we simply have 
+\begin_inset Formula $g=\{g^{p}\},\,p=1,\,\ldots,\,\text{ord}\,g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Examples
+\end_layout
+
+\begin_layout Itemize
+Cyclic group 
+\begin_inset Formula $\mathbb{Z}_{6}$
+\end_inset
+
+ has subgroups of order two and three, generated by 
+\begin_inset Formula $\theta^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta^{2},$
+\end_inset
+
+ respectively
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $O(3)$
+\end_inset
+
+ has discrete subgroup given by 
+\begin_inset Formula $\{1,-1\}$
+\end_inset
+
+.
+ It has a continuous family of subgroups given by those rotations that leave
+ a given vector invariant
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U(2)$
+\end_inset
+
+ has non equivalent (not related by similarity transformation ) one-dimensional
+ subgroups 
+\begin_inset Formula 
+\[
+U(1)=\{e^{i\varphi}I\}\quad\text{and}\quad U(1)_{B}=\left\{ \begin{pmatrix}e^{i\varphi} & 0\\
+0 & e^{-i\varphi}
+\end{pmatrix}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For every group 
+\begin_inset Formula $G$
+\end_inset
+
+, the 
+\emph on
+center 
+\emph default
+is the set of those elements which commute with all elements in 
+\begin_inset Formula $G$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Z(G)=\{h\in G\bigr|hg=gh\quad\forall\,g\in G\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Cosets
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $H=\{h_{i}\}$
+\end_inset
+
+ be a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ any group element.
+ The set 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+gH=\{gh_{i}\}
+\]
+
+\end_inset
+
+is called left coset of 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Similarly, 
+\begin_inset Formula $Hg$
+\end_inset
+
+ is a right coset.
+ It is easy to show that
+\end_layout
+
+\begin_layout Itemize
+A coset 
+\begin_inset Formula $gH$
+\end_inset
+
+ is a subgroup if and only if 
+\begin_inset Formula $g\in H$
+\end_inset
+
+, in which case 
+\begin_inset Formula $gH=H$
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+If 
+\begin_inset Formula $g\notin H$
+\end_inset
+
+ then 
+\begin_inset Formula $gH\in G$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Two cosets 
+\begin_inset Formula $g_{1}H$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{2}H$
+\end_inset
+
+ are either equal or disjoint.
+\end_layout
+
+\begin_layout Itemize
+All cosets have the same number of elements
+\end_layout
+
+\begin_layout Subsection*
+Conjugates
+\end_layout
+
+\begin_layout Standard
+Two group elements are called conjugate, written 
+\begin_inset Formula $g_{1}\sim g_{2}$
+\end_inset
+
+ if there exists a element 
+\begin_inset Formula $g$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{1}=gg_{2}g^{-1}
+\]
+
+\end_inset
+
+Conjugacy is an equivalence relation, i.e.
+ 
+\end_layout
+
+\begin_layout Itemize
+it is reflexive 
+\begin_inset Formula $g\sim g$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+symmetric, i.e.
+ from 
+\begin_inset Formula $g_{1}\sim g_{2}$
+\end_inset
+
+ follows 
+\begin_inset Formula $g_{2}\sim g_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+transitive (
+\begin_inset Quotes eld
+\end_inset
+
+across to go
+\begin_inset Quotes erd
+\end_inset
+
+): if 
+\begin_inset Formula $g_{1}\sim g_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{2}\sim g_{3}$
+\end_inset
+
+, then 
+\begin_inset Formula $g_{1}\sim g_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since conjugacy is a equivalent relation, we can form equivalence classes,
+ called 
+\emph on
+conjugate classes
+\emph default
+.
+ The class number of 
+\begin_inset Formula $G$
+\end_inset
+
+ is the number of distinct (nonequivalent) conjugacy pairs Each element
+ in the group belong precisely to one conjugacy class.
+ Given any element 
+\begin_inset Formula $g$
+\end_inset
+
+, its conjugacy class is the set of all conjugate elements
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[g]=\{h\in G\bigr|h\sim g\}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $g$
+\end_inset
+
+ is called a representative of the class.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $g'$
+\end_inset
+
+ is another element of 
+\begin_inset Formula $[g]$
+\end_inset
+
+, it can also be used as the representative, i.e.
+ 
+\begin_inset Formula $[g]=[g']$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $g'\sim g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For Abelian groups, every element is its own conjugacy class 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Since all 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ commute 
+\begin_inset Formula $g_{1}=gg_{1}g^{-1}=g_{1}gg^{-1}=g_{1}\quad\forall\,g_{1}\in G$
+\end_inset
+
+.
+ Because this holds for all 
+\begin_inset Formula $g$
+\end_inset
+
+, there
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The identity element is always its own class
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $g$
+\end_inset
+
+ is of order 
+\begin_inset Formula $p$
+\end_inset
+
+, every element of 
+\begin_inset Formula $[g]$
+\end_inset
+
+ is also of order 
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Examples
+\end_layout
+
+\begin_layout Standard
+Symmetric group 
+\begin_inset Formula $S_{3}$
+\end_inset
+
+, consisting of all 
+\begin_inset Formula $6$
+\end_inset
+
+ permutations of three elements, has three conjugacy classes
+\end_layout
+
+\begin_layout Itemize
+no change, the identity 
+\begin_inset Formula $e$
+\end_inset
+
+ is a conjugate class with itself 
+\begin_inset Formula $e=geg^{-1}=e$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+e=\begin{pmatrix}1 & 2 & 3\\
+1 & 2 & 3
+\end{pmatrix},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+transposing two
+\begin_inset Formula 
+\[
+g_{1}=\begin{pmatrix}1 & 2 & 3\\
+2 & 1 & 3
+\end{pmatrix},\,g_{2}=\begin{pmatrix}1 & 2 & 3\\
+1 & 3 & 2
+\end{pmatrix},g_{3}=\begin{pmatrix}1 & 2 & 3\\
+3 & 2 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{1}=gg_{2}g^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Normal Subgroups
+\end_layout
+
+\begin_layout Standard
+A subgroup is called a normal subgroup (or invariant subgroup) if it is
+ self-conjugate, i.e.
+ if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+gHg^{-1}=H\quad\forall\,g\in G
+\]
+
+\end_inset
+
+This is denoted as 
+\begin_inset Formula $H\triangleleft G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A normal subgroup is one for which left and right cosets coincide, since
+ 
+\begin_inset Formula $gHg^{-1}=H\Leftrightarrow gH=Hg$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A normal subgroup must be a union of conjugacy classes 
+\begin_inset Formula $[g]$
+\end_inset
+
+ with 
+\begin_inset Formula $g_{1}=ghg^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For Abelian groups, every subgroup is normal 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Since all 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ commute, 
+\begin_inset Formula $gH=Hg$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+gHg^{-1}=H
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The center (elements which commute with all elements in 
+\begin_inset Formula $G$
+\end_inset
+
+) is always a normal subgroup 
+\end_layout
+
+\begin_layout Itemize
+A subgroup which contains half of all elements, i.e.
+ for which 
+\begin_inset Formula $\bigl|G\bigr|=2\bigl|H\bigr|$
+\end_inset
+
+ is a normal subgroup 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Why?
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset Formula 
+\[
+gH\in H\quad\forall\,g\in H
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $N\vartriangleleft G$
+\end_inset
+
+, 
+\begin_inset Formula $H$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $H$
+\end_inset
+
+, then 
+\begin_inset Formula $N\vartriangleleft H$
+\end_inset
+
+.
+ The converse is not true, i.e.
+ if 
+\begin_inset Formula $H\vartriangleleft G$
+\end_inset
+
+ and 
+\begin_inset Formula $K\vartriangleleft H$
+\end_inset
+
+, it is not necessarily true that 
+\begin_inset Formula $K\vartriangleleft G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A group which has no nontrivial normal subgroups (i.e.
+ other than 
+\begin_inset Formula $\{e\}$
+\end_inset
+
+ and 
+\begin_inset Formula $G$
+\end_inset
+
+ itself) is called simple.
+\end_layout
+
+\begin_layout Subsection*
+Quotient Groups 
+\end_layout
+
+\begin_layout Standard
+Normal or invariant subgroups allow for the construction of quotient groups.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Loosely speaking, quotient group 
+\begin_inset Formula $G/H$
+\end_inset
+
+ is obtained by dividing out the subgroup
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $H\vartriangleleft G$
+\end_inset
+
+ (be a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+).
+ The quotient group is the set of left cosets of 
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G/H=\{gH\bigl|g\in G\}
+\]
+
+\end_inset
+
+The group operation is defined as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{1}H\cdot g_{2}H=g_{1}g_{2}H
+\]
+
+\end_inset
+
+Group elements 
+\begin_inset Formula $g\neq g'$
+\end_inset
+
+ for which 
+\begin_inset Formula $gH=g'H$
+\end_inset
+
+, make sure replacing 
+\begin_inset Formula $g$
+\end_inset
+
+ to 
+\begin_inset Formula $g'$
+\end_inset
+
+ leads to the same result
+\end_layout
+
+\begin_layout Itemize
+In 
+\begin_inset Formula $G/H$
+\end_inset
+
+, 
+\begin_inset Formula $H$
+\end_inset
+
+ itself is the identity element since 
+\begin_inset Formula $H\cdot gH=gH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H=hH\quad\forall\,h\in H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+gH=H\cdot gH=hH\cdot gH=hgH
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Group Homomorphisms 
+\end_layout
+
+\begin_layout Standard
+Map 
+\begin_inset Formula $f:G\rightarrow H$
+\end_inset
+
+ between two groups which preserves the group structure, i.e.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(g_{1}g_{2})=f(g_{1})f(g_{2})
+\]
+
+\end_inset
+
+L.h.s.
+ group product of 
+\begin_inset Formula $G$
+\end_inset
+
+ and r.h.s.
+ group product of 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+If a group isomorphism is an invertible group homomorphism.
+ 
+\end_layout
+
+\begin_layout Itemize
+If there exists a group isomorphism between 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $H$
+\end_inset
+
+, groups are called isomorphic 
+\begin_inset Formula $G\approxeq H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A group isomorphism from a group to itself is a group automorphism 
+\end_layout
+
+\begin_layout Itemize
+From defining property of a homomorphism follows
+\begin_inset Formula 
+\[
+f(e_{G})=e_{H}\quad f(g^{-1})=(f(g))^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $e_{G}g=g$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{H}h=h$
+\end_inset
+
+.
+ Homomorphism preserves group structure 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+f(g_{1})f(g_{2}) & =f(g_{1},g_{2})\\
+ & =f(g_{1}e_{G},g_{2}e_{G})\\
+ & =f(g_{1}e_{G})f(g_{2}e_{G})\\
+ & =f(g_{1})f(e_{G})f(g_{2})f(e_{G})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+From this follows 
+\begin_inset Formula $f(e_{G})=e_{H}$
+\end_inset
+
+, and therefore
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+e_{H} & =f(e_{G})\\
+ & =f(gg^{-1})\\
+ & =f(g)f(g^{-1})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+from which follows 
+\begin_inset Formula $f(g^{-1})=(f(g))^{-1}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $e_{g}$
+\end_inset
+
+ is the identity of 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+ is the inverse of 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ then 
+\begin_inset Formula $f(e_{g})$
+\end_inset
+
+ and 
+\begin_inset Formula $f(g)^{-1}$
+\end_inset
+
+ are the identity and inverse of 
+\begin_inset Formula $f(g)\in H$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The image of 
+\begin_inset Formula $f$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $f(G)$
+\end_inset
+
+ is the part of 
+\begin_inset Formula $H$
+\end_inset
+
+ reached by 
+\begin_inset Formula $f$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(G)=\{\left.h\in H\right|\exists\,g\in G\,\text{with}\,f(g)=h\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Kernel of 
+\begin_inset Formula $f$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\text{ker}f$
+\end_inset
+
+, is the subset of 
+\begin_inset Formula $G$
+\end_inset
+
+ mapped to identity in 
+\begin_inset Formula $H$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{ker}f=\{\left.g\in G\right|f(g)=e_{H}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ is injective if and only if 
+\begin_inset Formula $\text{ker}f=\{e_{G}\}$
+\end_inset
+
+: Assume 
+\begin_inset Formula $f(g)=f(h)$
+\end_inset
+
+(i.e.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ is not injective nor bijective), so 
+\begin_inset Formula $f(g^{-1}h)=f(g^{-1})f(h)=f(h)^{-1}f(h)=e_{H}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $g^{-1}h\in\text{ker}f$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\text{ker}f=\{e_{G}\}$
+\end_inset
+
+, then
+\begin_inset Formula $g=h$
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Injective is one-to-one correspondence (bijective), but not all elements
+ in 
+\begin_inset Formula $H$
+\end_inset
+
+ are reached
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Three important theorems, called isomorphism theorems.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $f:G\rightarrow H$
+\end_inset
+
+ be a group homomorphism (linear operation in the group action)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The kernel 
+\begin_inset Formula $\text{ker}f$
+\end_inset
+
+ is a normal subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+The image 
+\begin_inset Formula $f(G)$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The quotient 
+\begin_inset Formula $G/\text{ker}f$
+\end_inset
+
+ is isomorphic to 
+\begin_inset Formula $f(G)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tilde{f}:\begin{cases}
+G/\text{ker}f & \rightarrow f(G)\\
+g(\text{ker}f) & \rightarrow f(g)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Product Groups 
+\end_layout
+
+\begin_layout Standard
+Combine groups into bigger groups 
+\end_layout
+
+\begin_layout Subsection*
+Representations
+\end_layout
+
+\begin_layout Standard
+So fare, we discussed groups as sets of elements that can be multiplied
+ with each other.
+ 
+\end_layout
+
+\begin_layout Itemize
+In physical applications, we need the elements of a group to act on various
+ physical quantities, e.g.
+ 
+\begin_inset Formula $SO(3)$
+\end_inset
+
+ rotations can be applied to vectors in space or a QM state
+\end_layout
+
+\begin_layout Itemize
+When a group acts on a vector space, it is called a 
+\emph on
+representation
+\emph default
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+General Group Actions
+\end_layout
+
+\begin_layout Itemize
+Define action of a group on a general set 
+\begin_inset Formula $X$
+\end_inset
+
+ which may be infinite or finite, discrete, compact or whatnot
+\end_layout
+
+\begin_layout Itemize
+Bijections (mappings with one-to-one correspondence) of this set naturally
+ form a group, sometimes called 
+\emph on
+symmetry group
+\emph default
+ 
+\begin_inset Formula $\text{Sym}(X)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $X$
+\end_inset
+
+ is finite this reproduces the definition of the symmetric group 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Definition: A group action is a homomorphism from 
+\begin_inset Formula $G$
+\end_inset
+
+ into 
+\begin_inset Formula $\text{Sym}(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Bijection associated to 
+\begin_inset Formula $g$
+\end_inset
+
+ as a left multiplication with 
+\begin_inset Formula $g$
+\end_inset
+
+ instead 
+\begin_inset Formula $f_{g}(\cdot)$
+\end_inset
+
+, so if 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ and 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, the group action is written
+\begin_inset Formula 
+\[
+x\mapsto g\cdot x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This satisfies 
+\begin_inset Formula $(gh)\cdot x=g\cdot(h\cdot x)$
+\end_inset
+
+ and 
+\begin_inset Formula $e\cdot x=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Examples: Some groups are defined by their action, e.g.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+symmetric group 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ (permutations) acts on the 
+\begin_inset Formula $n$
+\end_inset
+
+-element set
+\end_layout
+
+\begin_layout Itemize
+Euclidean group acts on the affine space 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Representation
+\end_layout
+
+\begin_layout Standard
+In the following, 
+\begin_inset Formula $X$
+\end_inset
+
+ is a vector space and 
+\begin_inset Formula $G$
+\end_inset
+
+ acts by linear transformation
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Definition
+\series default
+: A representation of a group 
+\begin_inset Formula $G$
+\end_inset
+
+ is a continuous homomorphism 
+\begin_inset Formula $D$
+\end_inset
+
+ from 
+\begin_inset Formula $G$
+\end_inset
+
+ to the group of automorphisms of a vector space 
+\begin_inset Formula $V$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D:G\rightarrow\text{Aut}V
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+ is the representation of 
+\begin_inset Formula $G$
+\end_inset
+
+ which acts on the vector space 
+\begin_inset Formula $V$
+\end_inset
+
+ which is called the representation space with dimension 
+\begin_inset Formula $\text{dim}V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+What is the meaning of continuous, e.g.
+ vector space 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assume 
+\begin_inset Formula $V$
+\end_inset
+
+ is finite-dimensional unless otherwise stated
+\end_layout
+
+\begin_layout Itemize
+Representation 
+\begin_inset Formula $D(g)=1\,\forall\,g$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\text{dim}V=1$
+\end_inset
+
+, this is called trivial representation
+\end_layout
+
+\begin_layout Itemize
+Matrix groups, i.e.
+ 
+\begin_inset Formula $GL(n,\,K)$
+\end_inset
+
+ and subgroups, naturally have the representation by themselves, i.e.
+ by 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices action on 
+\begin_inset Formula $K$
+\end_inset
+
+
+\begin_inset Formula $^{n}$
+\end_inset
+
+satisfying the defining constraints (e.g.
+ nonzero determinant).
+ Fundamental representation 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Elements in the group are identical to there representation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Representations 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula $D'$
+\end_inset
+
+ are called similar (equivalent) if they are related by a similarity transformat
+ion, i.e.
+ if there is an operator 
+\begin_inset Formula $S$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+SD(g)S^{-1}=D'(g)\quad\forall\,g
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Note, 
+\begin_inset Formula $S$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Two similar representations can be thought of as the same representation
+ in different bases 
+\end_layout
+
+\begin_layout Itemize
+Representation if called 
+\emph on
+faithful
+\emph default
+ if it is injective, i.e.
+ 
+\begin_inset Formula $\text{ker}D=\{e\}$
+\end_inset
+
+, or if 
+\begin_inset Formula $D(g_{1})\neq D(g_{2})$
+\end_inset
+
+ whenever 
+\begin_inset Formula $g_{1}\neq g_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $V$
+\end_inset
+
+ is equipped with a (positive definite) scalar product, 
+\begin_inset Formula $D$
+\end_inset
+
+ is unitary (assuming complex vector space) if it preserves that scalar
+ product, i.e.
+ 
+\begin_inset Formula 
+\[
+\bigl\langle u,\,v\bigr\rangle=\bigl\langle D(g)u,\,D(g)v\bigr\rangle\quad\forall\,g\in G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Unitarity
+\end_layout
+
+\begin_layout Standard
+For finite groups and compact 
+\emph on
+Lie groups
+\emph default
+, all representations are equivalent to a unitary one.
+ Unitary means that 
+\begin_inset Formula $D(g^{-1})=D(g)^{\dagger}\Leftrightarrow D(g)^{\dagger}D(g^{-1})=D(e)$
+\end_inset
+
+.
+ The whole representation 
+\begin_inset Formula 
+\[
+S=\sum_{g}D(g)^{\dagger}D(g)
+\]
+
+\end_inset
+
+measures the non-unitarity of 
+\begin_inset Formula $D$
+\end_inset
+
+ which we want to transform away.
+ Define Hermitian square root matrix 
+\begin_inset Formula $X^{2}=S$
+\end_inset
+
+.
+ First, diagonalizing 
+\begin_inset Formula $S$
+\end_inset
+
+, taking the square root of the diagonal matrix and undoing it.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=US_{\text{diag}}U^{\dagger}.
+\]
+
+\end_inset
+
+Entries of 
+\begin_inset Formula $S_{\text{diag}}=\text{diag}(\lambda_{1}^{2},\,\ldots,\,\lambda_{d}^{2})$
+\end_inset
+
+ are positive real numbers because 
+\begin_inset Formula $D(g)$
+\end_inset
+
+ must be invertible, and so cannot have zero eigenvalues.
+ 
+\begin_inset Formula $\sqrt{S_{\text{diag}}}=\text{diag}(\lambda_{1},\,\ldots,\,\lambda_{d})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X^{2}=S\Leftrightarrow X=\sqrt{S}\Leftrightarrow X=U\sqrt{S_{\text{diag}}}U^{\dagger}
+\]
+
+\end_inset
+
+Consider
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D'(g)=XD(g)X^{-1}
+\]
+
+\end_inset
+
+which turns out to be unitary
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D'(g)^{\dagger}D'(g)=X^{-1}D(g)^{\dagger}X^{2}D(g)X^{-1}=X^{-1}X^{2}X^{-1}=\mathbb{I}
+\]
+
+\end_inset
+
+where we have used
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+D(g)^{\dagger}X^{2}D(g) & =D(g)^{\dagger}(\sum_{h}D(h)^{\dagger}D(h))D(g)\\
+ & =\sum_{h}D(hg)^{\dagger}D(hg)\\
+ & =\sum_{h}D(h)^{\dagger}D(h)\\
+ & =X^{2}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+From the second to third line, 
+\begin_inset Formula $gh\in G$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Reducibility
+\end_layout
+
+\begin_layout Standard
+Can we break up a representation into smaller parts? This will be the case
+ if there is a subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+ which gets mapped to itself, because then the representation can be restricted
+ to that subspace.
+ 
+\end_layout
+
+\begin_layout Itemize
+Formally 
+\begin_inset Formula $V_{1}\subset V$
+\end_inset
+
+ is an 
+\emph on
+invariant subspace
+\emph default
+ if 
+\begin_inset Formula $D(g)V_{1}\subset V_{1}\quad\forall\,g\in G$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What does 
+\begin_inset Formula $D(g)V_{1}$
+\end_inset
+
+ means? 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Definition
+\series default
+: A representation 
+\begin_inset Formula $D$
+\end_inset
+
+ is called 
+\emph on
+reducible
+\emph default
+ if 
+\begin_inset Formula $V$
+\end_inset
+
+ contains an invariant subspace.
+ Otherwise 
+\begin_inset Formula $D$
+\end_inset
+
+ is called irreducible 
+\end_layout
+
+\begin_layout Itemize
+A representation is called fully reducible if 
+\begin_inset Formula $V$
+\end_inset
+
+ can be written as the direct sum of irreducible subspaces, i.e.
+ 
+\begin_inset Formula $V=V_{1}\oplus\cdots\oplus V_{p}$
+\end_inset
+
+.
+ All the 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ are invariant and the restriction of 
+\begin_inset Formula $D$
+\end_inset
+
+ to each 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ is irreducible 
+\end_layout
+
+\begin_layout Itemize
+Linear algebra, if 
+\begin_inset Formula $V=V_{1}\oplus V_{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $\text{dim}V=\text{dim}V_{1}+\text{dim}V_{2}$
+\end_inset
+
+.
+ The direct sum can be understood as the Cartesian product, the group product
+ is taken element wise 
+\end_layout
+
+\begin_layout Itemize
+Assume 
+\begin_inset Formula $D$
+\end_inset
+
+ is reducible, i.e.
+ there is an invariant subspace 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Choosing 
+\begin_inset Formula $V$
+\end_inset
+
+ such that the first 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+ basis vectors span 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ the matrices of 
+\begin_inset Formula $D$
+\end_inset
+
+ take the block-upper triangular form
+\begin_inset Formula 
+\[
+D(g)=\begin{pmatrix}D_{1}(g) & D_{12}(g)\\
+0 & D_{2}(g)
+\end{pmatrix}\quad\forall\,g
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $D$
+\end_inset
+
+ is fully reducible, 
+\begin_inset Formula $D$
+\end_inset
+
+ can be brought to block-diagonal form
+\begin_inset Formula 
+\[
+D(g)=\begin{pmatrix}D_{1}(g)\\
+ & \ddots\\
+ &  & D_{p}(g)
+\end{pmatrix}=D_{1}(g)\oplus\cdots\oplus D_{p}(g)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{i}$
+\end_inset
+
+ are representations of 
+\begin_inset Formula $G$
+\end_inset
+
+ of dimension 
+\begin_inset Formula $d_{i}=\text{dim}V_{i}$
+\end_inset
+
+ and are called the irreducible components of 
+\begin_inset Formula $D$
+\end_inset
+
+ each acting on an 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+-dimensional space 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Reducibility does not imply complete reducibility.
+ E.g.
+ additive group of integers by two-dimensional matrices
+\begin_inset Formula 
+\[
+T_{p}=\begin{pmatrix}1 & p\\
+0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Clearly, 
+\begin_inset Formula $T_{p}T_{q}=T_{p+q}$
+\end_inset
+
+, the vector 
+\begin_inset Formula $e_{1}=(1,0)^{T}$
+\end_inset
+
+ is an eigenvector of all 
+\begin_inset Formula $T_{p}$
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\begin{pmatrix}1 & p\\
+0 & 1
+\end{pmatrix}\begin{pmatrix}1 & q\\
+0 & 1
+\end{pmatrix}=\begin{pmatrix}1 & q+p\\
+0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Invariant subspace 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+D(g)V_{1}\subset V_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Here 
+\begin_inset Formula $D(g)$
+\end_inset
+
+ is 
+\begin_inset Formula $T_{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is axis in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+T_{p}e_{1}=e_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $T_{p}$
+\end_inset
+
+ is of Jordan, and therefore not diagonalizable and 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ is not an eigenvector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Unitary representations are always completely reducible
+\end_layout
+
+\begin_layout Itemize
+Proof: 
+\begin_inset Formula $D$
+\end_inset
+
+ is fully reducible if for every invariant subspace 
+\begin_inset Formula $V_{1},$
+\end_inset
+
+also its complement 
+\begin_inset Formula $V_{1}^{\bot}$
+\end_inset
+
+ is invariant.
+ This property follows from unitarity: Let 
+\begin_inset Formula $v\in V_{1},\,w\in V_{1}^{\bot}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $\bigl\langle w,\,v\bigr\rangle=0$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\[
+0=\bigl\langle D(g)v,\,w\bigr\rangle=\bigl\langle v,\,D(g)^{\dagger}w\bigr\rangle=\bigl\langle v,\,D(g^{-1})w\bigr\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This implies that the irreducible representations are building blocks for
+ all representations.
+ Main task
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+classify all possible irreducible representations of a given group, and
+ 
+\end_layout
+
+\begin_layout Itemize
+find algorithms to reduce a representations to its irreducible components
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $P$
+\end_inset
+
+ denote a projection operator onto some subspace 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is invariant (and hence reducible) if 
+\begin_inset Formula 
+\[
+PD(g)P=D(g)P\quad\forall\,g\in G
+\]
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The second projector acts like an identity because the first projection
+ projects into 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ and invariant is defined as 
+\begin_inset Formula $D(g)V_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Furthermore, 
+\begin_inset Formula $D$
+\end_inset
+
+ is completely reducible if for every 
+\begin_inset Formula $P$
+\end_inset
+
+ that satisfies this, 
+\begin_inset Formula $\mathbb{I}-P$
+\end_inset
+
+ also does, which in turn is equivalent to the statement that 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula $P$
+\end_inset
+
+ commute
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{I}-P$
+\end_inset
+
+ is something like the complement to 
+\begin_inset Formula $P$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+meaning that it projects into space the 
+\begin_inset Formula $V_{1}^{\bot}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+(\mathbb{I}-P)v=v-\underbrace{Pv}_{\in V_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Multiplying from the left with 
+\begin_inset Formula $vP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+vPv-vPv=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Direct Sums and Tensor Products
+\end_layout
+
+\begin_layout Standard
+In the last section, we have seen how to reduce representations, there is
+ also an opposite direction, sticking representations together.
+ The first one is rather boring.
+\end_layout
+
+\begin_layout Itemize
+Two representations 
+\begin_inset Formula $D_{1,2}$
+\end_inset
+
+ acting on space 
+\begin_inset Formula $V_{1,2}$
+\end_inset
+
+ we can from the direct sum representation 
+\begin_inset Formula $D_{1}\oplus\,D_{2}$
+\end_inset
+
+ acting on 
+\begin_inset Formula $V_{1}\oplus V_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{1}\oplus V_{2}$
+\end_inset
+
+ is the space of ordered pairs 
+\begin_inset Formula $(v_{1},\,v_{2})$
+\end_inset
+
+ on which the combined representation acts as
+\begin_inset Formula 
+\[
+(v_{1},\,v_{2})\mapsto(D_{1}(g)v_{1},\,D_{2}(g)v_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Obviously reducible, and already in block diagonal form
+\end_layout
+
+\begin_layout Standard
+The other one is more interesting.
+\end_layout
+
+\begin_layout Itemize
+Tensor product 
+\begin_inset Formula $V=V_{1}\otimes\,V_{2}$
+\end_inset
+
+.
+ This space is constructed as follows:
+\end_layout
+
+\begin_layout Itemize
+Take bases 
+\begin_inset Formula $\{v_{i}\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{w_{a}\}$
+\end_inset
+
+ of 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+.
+ A basis of 
+\begin_inset Formula $V$
+\end_inset
+
+ is then given by the set 
+\begin_inset Formula $\{v_{i}\otimes w_{a}\}$
+\end_inset
+
+, i.e.
+\begin_inset Formula 
+\[
+V=\{a^{ia}v_{i}\otimes w_{a}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The coefficients 
+\begin_inset Formula $a^{ia}$
+\end_inset
+
+ depending on whether 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+ are real or complex spaces.
+ Implicit sum convention 
+\begin_inset Formula 
+\[
+a^{ia}v_{i}\otimes\,w_{a}=\sum_{i=1}^{d_{1}}\sum_{a=1}^{d_{2}}a^{ia}v_{i}\otimes\,w_{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+An elements of 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ is thus specified by its components 
+\begin_inset Formula $a^{ia}$
+\end_inset
+
+ which can be pictured as a matrix
+\begin_inset Formula 
+\[
+a^{ia}=\begin{pmatrix}a^{11} &  & a^{1d_{2}}\\
+\\
+a^{d_{1}1} &  & a^{d_{1}d_{2}}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Basis elements of the tensor product space are products of the basis elements
+ of the factors, a general element 
+\begin_inset Formula $V_{1}\otimes V_{2}$
+\end_inset
+
+ cannot be written as a single tensor product of an element of 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ and an element of 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In QM, this is called entanglement.
+ Simples form, two spins which can be either up or down.
+ Then an entangled state would be 
+\begin_inset Formula 
+\[
+\bigl|\uparrow\bigr\rangle_{1}\otimes\bigl|\uparrow\bigr\rangle_{2}-\bigl|\uparrow\bigr\rangle_{1}\otimes\bigl|\uparrow\bigr\rangle_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Schur's Lemma
+\end_layout
+
+\begin_layout Standard
+Important property for irreducible components (subspace representations).
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Definition
+\series default
+: Given two representations 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{2}$
+\end_inset
+
+ on acting on 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{2}$
+\end_inset
+
+m an inter-winer between 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{2}$
+\end_inset
+
+ is a linear operator which 
+\begin_inset Quotes eld
+\end_inset
+
+commutes
+\begin_inset Quotes erd
+\end_inset
+
+ with 
+\begin_inset Formula $G$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F:\,V_{1}\mapsto V_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+FD_{1}(g)=D_{2}(g)F\quad\forall\,g\in G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Kernel and image of 
+\begin_inset Formula $F$
+\end_inset
+
+ are invariant subspaces.
+ Assume 
+\begin_inset Formula $v\in\text{ker}F$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Fv=0$
+\end_inset
+
+.
+ Then
+\begin_inset Formula 
+\[
+FD_{1}v=D_{2}Fv=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+So 
+\begin_inset Formula $D_{1}v\in\text{ker}F$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Eigenstates in QM
+\end_layout
+
+\begin_layout Itemize
+Eigenstates of the Hamiltonian for a given energy come in (usually irreducible)
+ representations of the symmetry group
+\end_layout
+
+\begin_layout Itemize
+Consider symmetry group 
+\begin_inset Formula $G$
+\end_inset
+
+ of the Hamiltonian, i.e.
+ those operators which commute with 
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Divide Hilbert space into the eigenspaces of 
+\begin_inset Formula $H$
+\end_inset
+
+, i.e.
+ the subspaces corresponding to the different eigenvalues
+\end_layout
+
+\begin_layout Itemize
+Each such subspace carries a representation of 
+\begin_inset Formula $G$
+\end_inset
+
+, since acting with any 
+\begin_inset Formula $D(g)$
+\end_inset
+
+ does not change the eigenvalue, because
+\begin_inset Formula 
+\[
+[H,\,D(g)]=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Because Hilbert space is a complex vector space
+\end_layout
+
+\end_body
+\end_document
